@@ -16,7 +16,6 @@ class Environment:
         for scope in self.env:
             if identifier in scope:
                 raise Exception('RedeclarationError')
-                return
 
         if initial_value == None:
             self.env[-1][identifier] = {'value': self.defaults[variable_type], 'type': self.variable_types[variable_type]}
